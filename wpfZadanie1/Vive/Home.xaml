@@ -1,0 +1,45 @@
+﻿<Page x:Class="wpfZadanie1.Vive.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpfZadanie1.Vive"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Home">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#E74346" >
+            <StackPanel Grid.Column="0"   VerticalAlignment="Center" Margin="0,-40,0,0"  >
+                <Image Source="/image/sharp.png"  Width="100"/>
+                <TextBlock Text="это приложение использует c# wpf" HorizontalAlignment="Center" Foreground="White"  FontSize="20" TextWrapping="WrapWithOverflow" FontFamily="Bahnschrift SemiBold SemiCondensed"></TextBlock>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Column="1" Background="#0F2140">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="10*"/>
+                </Grid.RowDefinitions>
+
+                <Frame Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Name="MainFrame" NavigationUIVisibility="Hidden"></Frame>
+
+                <StackPanel  VerticalAlignment="Bottom"  Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Content="LogIn" FontFamily="Arial Black" Background="{x:Null}" FontSize="20" BorderBrush="{x:Null}" Foreground="#FFD2D2D2" Click="Button_Click_LogIn" Name="ButtonLogIn" ></Button>
+                    <Button Content="SingUP" FontFamily="Arial Black" Background="{x:Null}" FontSize="20" BorderBrush="{x:Null}" Foreground="#FF868686"  Click="Button_Click_SingUP" Name="ButtonSingUp" ></Button>
+
+                </StackPanel>
+            </Grid>
+
+        </Border>
+
+    </Grid>
+</Page>
