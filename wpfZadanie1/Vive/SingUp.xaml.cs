@@ -29,7 +29,9 @@ namespace wpfZadanie1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            
+            if(_CheckBox.IsChecked == false) { MessageBox.Show("Согласитесь с правивалми"); return; }
+            
             if (password1.Password != password2.Password) { MessageBox.Show("Пароли не совпадают"); return;}
             if (password1.Password == string.Empty || password2.Password == string.Empty) { MessageBox.Show("Пароли пусты"); return; }
             if (EmailBox.Text == string.Empty) { MessageBox.Show("Email пуст"); return; }
@@ -42,9 +44,8 @@ namespace wpfZadanie1
             // не  доделал 
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
-            string sql = "";
+            string sql = $"INSERT INTO `_users`(`login`, `password`, `Email`) VALUES ('{login}','{password}','{email}')";
             MySqlCommand command = new MySqlCommand(sql,conn);
-            string result = command.ExecuteScalar().ToString();
              
         }
     }

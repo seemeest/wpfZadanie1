@@ -21,7 +21,7 @@
             <TextBox Width="200" Margin="0 10" Name="EmailBox" ></TextBox>
 
             <StackPanel Orientation="Horizontal" Margin="2">
-                <CheckBox />
+                <CheckBox  x:Name="_CheckBox"/>
                 <TextBlock Text=" Я ознакомился с правилами"   HorizontalAlignment="Center" Foreground="#FF93A0AB" TextWrapping="WrapWithOverflow"></TextBlock>
             </StackPanel>
 

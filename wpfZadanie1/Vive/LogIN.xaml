@@ -12,18 +12,18 @@
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left">
 
             <TextBlock Text="Ful name" Foreground="White" FontSize="18"></TextBlock>
-            <TextBox Width="200" Margin=" 0 10" ></TextBox>
-            <TextBlock Text="password" Foreground="White" FontSize="18" ></TextBlock>
-            <PasswordBox Width="200"  Margin="0 10" ></PasswordBox>
+            <TextBox Width="200" Margin=" 0 10"  x:Name="LoginBox"></TextBox>
+            <TextBlock Text="password" Foreground="White" FontSize="18"  ></TextBlock>
+            <PasswordBox Width="200"  x:Name="password1"   Margin="0 10" ></PasswordBox>
             
 
             <StackPanel Orientation="Horizontal" Margin="2">
-                <CheckBox />
+                <CheckBox x:Name="_CheckBox" />
                 <TextBlock Text=" Я ознакомился с правилами"   HorizontalAlignment="Center" Foreground="#FF93A0AB" TextWrapping="WrapWithOverflow"></TextBlock>
             </StackPanel>
 
             <Border Background="#EC4448"  Width="70" Height="30" Margin="0 20" CornerRadius="10" VerticalAlignment="Center" HorizontalAlignment="Center" >
-                <Button Width="60" Height="20" Foreground="White" Content="Sing Up" Background="{x:Null}"  BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                <Button Width="60" Height="20" Foreground="White" Content="Sing Up" Background="{x:Null}"  BorderThickness="0" VerticalAlignment="Center" HorizontalAlignment="Center"  Click="Button_Click"/>
             </Border>
 
         </StackPanel>
