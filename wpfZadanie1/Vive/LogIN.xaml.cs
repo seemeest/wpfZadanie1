@@ -50,6 +50,7 @@ namespace wpfZadanie1
                 {
                     // Доступ к данным по авторизованному пользователю
                     string username = reader.GetString("login");
+
                 }
             }
             else
