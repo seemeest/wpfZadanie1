@@ -41,12 +41,16 @@ namespace wpfZadanie1
             string email=EmailBox.Text;
             string password=password1.Password;
 
-            // не  доделал 
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             string sql = $"INSERT INTO `_users`(`login`, `password`, `Email`) VALUES ('{login}','{password}','{email}')";
-            MySqlCommand command = new MySqlCommand(sql,conn);
-             
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            MySqlDataReader reader = command.ExecuteReader();
+            Console.WriteLine(reader);
+            reader.Close();
+            conn.Close();
+
+
         }
     }
 }
